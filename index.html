@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Magament</title>
+</head>
+<body onload="renderListstudents()">
+    <div class="form-student">
+        <h3>Thông Tin Sinh Viên</h3>
+        <label >Họ Và Tên</label>
+        <input type="text" id="fullname">
+        <span class="error" id="fullname-error"></span>
+        <br/>
+        <label >Địa Chỉ Email</label>
+        <input type="text" id="email">
+        <span class="error" id="email-error"></span>
+        <br/>
+        <label >Số Điện Thoại</label>
+        <input type="text" id="phone">
+        <span class="error" id="phone-error"></span>
+
+        <br/>
+        <label >Địa Chỉ</label>
+        <input type="text" id="address">
+        <span class="error" id="address-error"></span>
+
+        <br/>
+        <label >Giới Tính</label>
+        <input type="radio" name="gender" id="male" value="1" >
+        Nam
+        <input type="radio" name="gender" id="famale" value="2" >
+        Nữ
+        <span class="error" id="gender-error"></span>
+
+        <br>
+        <label >&nbsp;</label>
+        <button onclick="save()">Luu Lai</button>
+
+    </div>
+    <div class="list-student" id="list-student">
+        <h3>Danh Sách Sinh Viên </h3>
+        <table id="grid-students"  width="750" border="1" cellpadding="0" >
+        </table>
+    </div>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <script src="./js/student.js"></script>
+</body>
+
+</html>
